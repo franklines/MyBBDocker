@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  mybb:
+    image: franks-mybb
+    ports:
+      - 8080:80
+  db:
+    image: mariadb:10.4.3
+    restart: always
+    environment:
+      MYSQL_DATABASE: databasename
+      MYSQL_USER: username
+      MYSQL_PASSWORD: "password"
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
