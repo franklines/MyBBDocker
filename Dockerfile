@@ -14,8 +14,7 @@ RUN apt-get update && \
     docker-php-ext-install gd mysqli zip mbstring xml 
 
 # Set some custom php.ini configurations.
-RUN touch /usr/local/etc/php/conf.d/custom.ini && \
-    echo -e "file_uploads = On\nmemory_limit = 264M\nupload_max_filesize = 100M\npost_max_size = 100M\nmax_execution_time = 300"
+RUN echo "file_uploads = On\nmemory_limit = 264M\nupload_max_filesize = 100M\npost_max_size = 100M\nmax_execution_time = 300" > /usr/local/etc/php/conf.d/custom.ini
 
 # We want our data to be persistent so let's use a volume.
 VOLUME /var/www/html

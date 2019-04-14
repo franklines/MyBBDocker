@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # If MyBB zip file is not found & no index, begin installation process.
-if [ ! -f /tmp/mybb.zip ] && [ ! -f /var/www/html/index.php];
+if [ ! -f /tmp/mybb.zip ] && [ ! -f /var/www/html/index.php ];
 then
     curl -o /tmp/mybb.zip -fSL https://resources.mybb.com/downloads/mybb_1820.zip;
     unzip /tmp/mybb.zip -d /var/www/html/;
