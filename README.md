@@ -1,4 +1,4 @@
-# MyBBDocker
+# MyBB Docker Image
 
 A MyBB forum docker container image.
 
